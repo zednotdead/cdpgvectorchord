@@ -4,7 +4,7 @@ ARG PG_MAJOR
 
 FROM alpine:${ALPINE_VERSION} as builder
 
-RUN apk add --no-cache curl alien rpm binutils xz
+RUN apk add --no-cache curl alien rpm binutils xz gcompat
 
 WORKDIR /tmp
 

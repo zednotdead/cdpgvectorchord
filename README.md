@@ -18,7 +18,7 @@ spec:
       postgresql:
         synchronous_commit: "on"
         parameters:
-          shared_preload_libraries: "vectors.so"
+          shared_preload_libraries: "vchord.so"
           search_path: '"$user", public, vectors'
 ```
 

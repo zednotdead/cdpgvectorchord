@@ -13,10 +13,9 @@ ARG TARGETARCH
 # renovate: datasource=github-releases depName=tensorchord/VectorChord
 ARG VECTORCHORD_TAG=0.4.0
 
-RUN echo https://github.com/tensorchord/VectorChord/releases/download/${VECTORCHORD_TAG}/postgresql-${PG_MAJOR}-vchord_${VECTORCHORD_TAG:1}-1_${TARGETARCH}.deb
-RUN curl --fail -o pgvectors.deb -sSL https://github.com/tensorchord/VectorChord/releases/download/${VECTORCHORD_TAG}/postgresql-${PG_MAJOR}-vchord_${VECTORCHORD_TAG:1}-1_${TARGETARCH}.deb && \
-    alien -r pgvectors.deb && \
-    rm -f pgvectors.deb
+RUN curl --fail -o vchord.deb -sSL https://github.com/tensorchord/VectorChord/releases/download/${VECTORCHORD_TAG}/postgresql-${PG_MAJOR}-vchord_${VECTORCHORD_TAG}-1_${TARGETARCH}.deb && \
+    alien -r vchord.deb && \
+    rm -f vchord.deb
 
 RUN rpm2cpio /tmp/*.rpm | cpio -idmv
 

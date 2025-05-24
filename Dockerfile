@@ -11,7 +11,7 @@ WORKDIR /tmp
 ARG PG_MAJOR
 ARG TARGETARCH
 # renovate: datasource=github-releases depName=tensorchord/VectorChord
-ARG VECTORCHORD_TAG=0.4.0
+ARG VECTORCHORD_TAG=0.3.0
 
 RUN curl --fail -o vchord.deb -sSL https://github.com/tensorchord/VectorChord/releases/download/${VECTORCHORD_TAG}/postgresql-${PG_MAJOR}-vchord_${VECTORCHORD_TAG}-1_${TARGETARCH}.deb && \
     alien -r vchord.deb && \

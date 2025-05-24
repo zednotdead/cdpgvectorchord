@@ -28,9 +28,9 @@ jobs:
       matrix:
         versions:
           # renovate: datasource=docker depName=registry.developers.crunchydata.com/crunchydata/crunchy-postgres
-          - "ubi8-15.8-0"
+          - "ubi9-16.8-2516"
           # renovate: datasource=docker depName=registry.developers.crunchydata.com/crunchydata/crunchy-postgres
-          - "ubi8-16.4-0"
+          - "ubi9-17.4-2516"
 
     runs-on: ubuntu-latest
     steps:

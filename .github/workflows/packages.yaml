@@ -70,7 +70,7 @@ jobs:
         id: version
         run: |
           CRUNCHY_VERSION=${{ matrix.versions }}
-          PG_VERSION=${CRUNCHY_VERSION#ubi8-}
+          PG_VERSION=${CRUNCHY_VERSION#ubi9-}
           PG_MAJOR=${PG_VERSION%.*}
           echo "PG_MAJOR=$PG_MAJOR" >> "$GITHUB_OUTPUT"
 

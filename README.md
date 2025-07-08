@@ -1,10 +1,10 @@
-# CrunchyData PGO with pgvecto.rs Extension
+# CrunchyData PGO with VectorChord Extension
 
-This repository contains container images for [CrunchyData PGO](https://github.com/CrunchyData/postgres-operator) that include the [pgvecto.rs](https://github.com/tensorchord/pgvecto.rs) extension.
+This repository contains container images for [CrunchyData PGO](https://github.com/CrunchyData/postgres-operator) that include the [VectorChord](https://github.com/tensorchord/VectorChord) extension.
 
 ## Important Configuration Note
 
-> :warning: **If you are deploying this image on an existing database:** The postgres configuration must be updated to enable the pgvecto.rs extension. 
+> :warning: **If you are deploying this image on an existing database:** The postgres configuration must be updated to enable the vchord.so extension. 
 
 To enable the extension, you need to set the `shared_preload_libraries` and `search_path` in your Cluster spec. Add the following configuration to your `PostgresCluster` yaml file:
 
